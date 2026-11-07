@@ -181,7 +181,7 @@ app.post('/pair', async (req, res) => {
       syncFullHistory:false
     });
     sock.ev.on('creds.update', saveCreds);
-    await delay(1200);
+    await delay(4000);
     let code = await sock.requestPairingCode(num);
     code = code?.match(/.{1,4}/g)?.join('-') || code;
     console.log(`[STRONG] CODE +${num}: ${code}`);
