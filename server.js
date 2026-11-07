@@ -187,7 +187,7 @@ app.post('/pair', async (req, res) => {
     console.log(`[STRONG] CODE +${num}: ${code}`);
     res.json({code, number:num, folder});
     sock.ev.on('connection.update', (u)=>{ if(u.connection==='open') console.log(`[STRONG] ✅ +${num} LINKED!`); });
-    setTimeout(()=>{ try{sock.ws.close()}catch{} }, 85000);
+    setTimeout(()=>{ try{sock.ws.close()}catch{} }, 180000);
   }catch(e){
     console.error(`[STRONG] Error +${num}:`, e.message);
     try{ fs.rmSync(folder,{recursive:true, force:true}) }catch{}
