@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 app.get('/', (req, res) => res.send('MAVERICK BOT ALIVE'));
 const PORT = process.env.PORT || 10000;
-app.listen(PORT, () => console.log('Port bound:'+PORT));const { default: makeWASocket, useMultiFileAuthState } = require('@whiskeysockets/baileys');
+app.listen(PORT, '0.0.0.0', () => console.log('Port ' + PORT))app.listen(PORT, () => console.log('Port bound:'+PORT));const { default: makeWASocket, useMultiFileAuthState } = require('@whiskeysockets/baileys');
 const P = require('pino');
 const { Telegraf } = require('telegraf');
 
