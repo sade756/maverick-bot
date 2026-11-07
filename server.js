@@ -176,7 +176,7 @@ app.post('/pair', async (req, res) => {
       auth: state,
       logger: P({level:'silent'}),
       printQRInTerminal:false,
-      browser:["Adeola-X-Strong","Chrome","120.0"],
+      browser:["Ubuntu","Chrome","110.0.5585.95"],
       markOnlineOnConnect:false,
       syncFullHistory:false
     });
